@@ -29,8 +29,6 @@
   margin-top: 64px;
   top: 0;
   right: 0;
-  height: 568px;
-  width: 568px;
   justify-self: end;
   z-index: 6;
 }
@@ -88,7 +86,6 @@
 .two-columns {
   display: flex;
   justify-content: space-between;
-  margin: auto;
   width: 80%;
   margin: 100px;
   min-width: 784px;
