@@ -52,7 +52,6 @@
   width: 730px;
   margin-left: 64px;
   line-height: 96px;
-  align-items: center;
   z-index: 40;
   margin-top: 0;
   margin-bottom: 0;
@@ -181,7 +180,6 @@
   font-weight: 600;
   position: relative;
   z-index: 10;
-  margin-top: 0;
   margin-bottom: 0;
 }
 
