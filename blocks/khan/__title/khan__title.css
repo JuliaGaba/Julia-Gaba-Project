@@ -1,0 +1,7 @@
+.khan__title {
+  display: flex;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 1.15;
+  margin-top: 0;
+}

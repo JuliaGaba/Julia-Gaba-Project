@@ -1,3 +1,12 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -18,6 +27,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -30,6 +40,8 @@
   right: 0;
   justify-self: end;
   z-index: 6;
+  animation: spin 20s linear infinite;
+
 }
 
 .logo_place_header {
@@ -73,6 +85,11 @@
 .header__link {
   text-decoration: none;
   color: #2f80ed;
+}
+
+.header__link:hover {
+  opacity: .6;
+  transition: all .2s ease-in;
 }
 
 .header__main-illustration {
@@ -136,6 +153,151 @@
   line-height: 34px;
 }
 
+.techniques {
+  margin: 0 auto;
+  padding: 100 0 0;
+  margin-bottom: 100px;
+  width: 80;
+}
+
+.cards {
+ width: 80%;
+ margin: 0 auto;
+ padding: 0;
+ max-width: 920px;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ justify-content: start;
+ column-gap: 100px;
+}
+
+.cards__item {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-align: center;
+}
+
+
+.cards__image {
+border-radius: 50%;
+margin: 60px 40px 0;
+padding: 0;
+width: 160px;
+height: 160px;
+}
+
+.cards__title {
+  margin: 43px auto 0;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.cards__description {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 16px auto 0;
+  line-height: 23px;
+}
+
+.video {
+  transform: translateY(50px);
+  margin-top: -50px;
+}
+
+.video__iframes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.oakley {
+  justify-content: center;
+  display: flex;
+  align-content: stretch;
+  background-color: #f2f2f2;
+  margin-bottom: -40px;
+  padding-top: 60px;
+}
+
+
+.khan__container {
+ width: 80%;
+ margin: 0 auto;
+ padding: 0;
+ display: flex;
+ flex-direction: column;
+ justify-content: start;
+ align-items: stretch;
+ text-align: start;
+}
+
+.khan__author {
+  display: flex;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.khan__title {
+  display: flex;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 1.15;
+  margin-top: 0;
+}
+
+.khan__quote {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 34px;
+  max-width: 790px;
+  margin-top: 50px;
+}
+
+.khan__quote-author {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.15;
+  margin-top: 36px;
+}
+
+.khan__quote-author-subline {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.15;
+  margin-top: 10px;
+}
+
+.khan__book-container {
+  margin-top: 68px;
+  position: relative;
+}
+
+.khan__book-pic {
+ height: 620px;
+ width: 608px;
+}
+
+.khan__buy-link {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 42px;
+  margin-left: 48px;
+  position: absolute;
+  text-decoration: none;
+  color: #2f80ed;
+}
+
+.khan__buy-link:hover {
+  opacity: .6;
+  transition: all .2s ease-in;
+}
+
 .section-title {
   line-height: 1.15;
   font-size: 60px;
@@ -197,6 +359,7 @@
   min-height: 890px;
   background-color: #f2f2f2;
   position: relative;
+  margin-top: -100px;
 }
 
 .feynman__image {
@@ -207,7 +370,6 @@
   width: 867px;
   height: 637px;
   z-index: 1;
-
 }
 
 .feynman__title {
@@ -224,6 +386,7 @@
   margin-bottom: 0;
   padding-top: 100px;
   text-align: center;
+  margin-top: 0;
 }
 
 .feynman__subtitle {
@@ -248,6 +411,12 @@
   right: 48px;
   text-decoration: none;
   color: #2f80ed;
+  z-index: 50;
+}
+
+.feynman__link:hover {
+  opacity: .6;
+  transition: all .2s ease-in;
 }
 
 .kaufman {
@@ -283,7 +452,6 @@
  margin: 0 auto 0;
  z-index: 10;
  position: relative;
-
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -304,7 +472,31 @@
   background-image: url(../images/kaufman-triangle.svg);
   margin-top: 0;
   top: 0;
+  animation: spin 20s linear infinite;
+}
 
+.rotation {
+  animation: spin 20s infinite linear;
+}
+
+.resources {
+  margin-top: 100px;
+}
+
+.resources__logo-zone {
+  margin: 80px auto 217px;
+  width: 1100px;
+  text-align: center;
+}
+
+.resources__logo {
+  height: 38px;
+  width: 270px;
+}
+
+.resources__link:hover {
+  opacity: .6;
+  transition: all .2s ease-in;
 }
 
 .footer {
@@ -370,6 +562,11 @@
   padding: 0;
 }
 
+.footer__column-link:hover {
+  opacity: .6;
+  transition: all .2s ease-in;
+}
+
 .footer__social-icon {
   width: 16px;
   height: 16px;
@@ -382,7 +579,9 @@
  height: 32px;
 }
 
-
+.digits {
+  margin-top: 100px;
+}
 
 
 
