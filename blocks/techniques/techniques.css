@@ -1,6 +1,7 @@
 .techniques {
   margin: 0 auto;
   padding: 100 0 0;
-  margin-bottom: 100px;
+  /* 150px в связи с блоком video, который затрагивает нижний блок*/
+  margin-bottom: 150px;
   width: 80;
 }
